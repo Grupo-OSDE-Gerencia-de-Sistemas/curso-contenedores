@@ -1,0 +1,43 @@
+{
+  "title": "Kubernetes Kustomize",
+  "description": "Kustomize",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "courseData": "env-init.sh"
+    },
+    "steps": [
+      {
+        "title": "Kustomize",
+        "text": "step1.md"
+      },
+      {
+        "title": "recursos Kustomization",
+        "text": "step2.md"
+      },
+      {
+        "title": "Deploy recursos",
+        "text": "step3.md"
+      },
+      {
+        "title": "Kustomize",
+        "text": "step4.md"
+      },
+      {
+        "title": "Kustomize",
+        "text": "step5.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "**/*.*", "target": "/root"}
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Kubernetes general",
+  "description": "conceptos y comandos generales sobre kubernetes",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Listar nodos",
+        "text": "step1.md"
+      },
+      {
+        "title": "Pods",
+        "text": "step2.md"
+      },
+      {
+        "title": "Verificar logs",
+        "text": "step3.md"
+      },
+      {
+        "title": "Deployment",
+        "text": "step4.md"
+      },
+      {
+        "title": "Horizontal Pod Autoscaler",
+        "text": "step5.md"
+      },
+      {
+        "title": "Service",
+        "text": "step6.md"
+      },
+      {
+        "title": "Resources",
+        "text": "step7.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
