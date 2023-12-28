@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cartilla-example
+  namespace: test
+  labels:
+    app: cartilla-example
+    tier: backend
+spec:
+  selector:
+    app: cartilla-example
+  type: ClusterIP
+  ports:
+    - port: 3000
+      targetPort: 3000
+      protocol: TCP

@@ -1,0 +1,31 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+images:
+  - name: IMAGE_TAG
+    newName: ubuntu
+    newTag: mantic-20231011
+
+configMapGenerator:
+  - name: app-config-cartilla-example
+    namespace: test
+    files:
+      - properties.env
+
+      
+secretGenerator:
+- envs:
+  - .env.secret
+  name: secrets-cartilla-example
+  namespace: test
+
+labels:
+- includeSelectors: true
+  pairs:
+    Aplicacion: OsdeExample
+
+patches:
+- path: hpa.yaml

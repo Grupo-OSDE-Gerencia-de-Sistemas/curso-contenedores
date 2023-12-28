@@ -1,6 +1,6 @@
 {
-  "title": "Kubernetes Kustomize",
-  "description": "Kustomize",
+  "title": "Introduccion Kustomize en K8s",
+  "description": "Kustomize comandos basicos.",
   "details": {
     "intro": {
       "text": "intro.md",
@@ -8,27 +8,32 @@
     },
     "steps": [
       {
-        "title": "Kustomize",
+        "title": "Estructura de carpetas",
         "text": "step1.md"
       },
       {
-        "title": "recursos Kustomization",
+        "title": "Edicion de imagenes en manifiesto de K8s",
         "text": "step2.md"
       },
       {
-        "title": "Deploy recursos",
+        "title": "Generacion de configMaps desde archivos de propiedades.",
         "text": "step3.md"
       },
       {
-        "title": "Kustomize",
+        "title": "Generacion Secrets.",
         "text": "step4.md"
       },
       {
-        "title": "Kustomize",
+        "title": "Generacion de etiquetas en los manifiestos.",
         "text": "step5.md"
+      },
+      {
+        "title": "Patch de configuracion.",
+        "text": "step6.md"
       }
     ],
     "finish": {
+      "title": "Para finalizar.",
       "text": "finish.md"
     },
     "assets": {

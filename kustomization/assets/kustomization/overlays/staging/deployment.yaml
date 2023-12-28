@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-example
+  namespace: test
+  labels:
+    app: nginx-example
+    tier: deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx-example
+      tier: backend
+  replicas: 1
+  revisionHistoryLimit: 5
+  template:
+    metadata:
+      name: nginx-example
+      labels:
+        app: nginx-example
+        tier: backend
+    spec:
+      containers:
+      - name: nginx-example
+        image: IMAGE_TAG
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 3000
+            name: appserver
+        envFrom:
+          - configMapRef:
+              name: app-config-nginx-example
+          - secretRef:
+              name: secrets-nginx-example
+        resources:
+          requests:
+            cpu: 10m
+            memory: 10m
+          limits:
+            cpu: 30m
+            memory: 100m    

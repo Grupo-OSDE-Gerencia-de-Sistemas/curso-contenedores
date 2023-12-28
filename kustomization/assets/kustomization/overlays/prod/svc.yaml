@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-example-svc
+  namespace: test
+  labels:
+    app: nginx-example
+    tier: backend
+spec:
+  selector:
+    app: nginx-example
+  type: ClusterIP
+  ports:
+    - port: 3000
+      targetPort: 3000
+      protocol: TCP
