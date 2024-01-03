@@ -1,0 +1,42 @@
+{
+  "title": "Service Mesh - Istio",
+  "description": "Demo sobre instalacion y componentes",
+  "details": {
+      "steps": [
+      {
+        "title": "Instalacion",
+        "text": "step1/step1.md"
+      },
+      {
+        "title": "Inyeccion de Envoy proxy",
+        "text": "step2.md"
+      },
+      {
+        "title": "Gateway y VirtualServices",
+        "text": "step3.md"
+      },
+      {
+        "title": "Authorization Policies",
+        "text": "step4.md"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {"file": "wait-background.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "demo.yaml", "target": "/tmp", "chmod": "+x"},
+        {"file": "**/*.*", "target": "/root"}
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
